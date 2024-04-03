@@ -1,0 +1,133 @@
+html {
+  box-sizing: border-box;
+  height: 100%;
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+body {
+  width: 100%;
+  min-width: var(--width-mobile);
+  min-height: 100%;
+  display: flex;
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-M);
+  line-height: var(--line-height);
+  font-weight: var(--font-weight-regular);
+  color: var(--color-text);
+  //background-color: var(--background-color);
+  margin-left: auto;
+  margin-right: auto;
+
+  -webkit-overflow-scrolling:touch;
+}
+
+
+#__nuxt,
+.root {
+  display: flex;
+  flex-direction: column;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+main {
+  padding-top: var(--header-height);
+
+  @media (min-width: 768px) {
+    height: 100%;
+    padding-top: 30px;
+  }
+}
+
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--color-text);
+}
+
+ul,
+li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+img {
+  min-width: max-content;
+  max-width: 100%;
+  height: auto;
+  font-size: 0;
+  line-height: 0;
+}
+
+svg,
+picture {
+  font-size: 0;
+  line-height: 0;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+a,
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  font-weight: inherit;
+  line-height: inherit;
+  color: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+
+  &:not(:focus):not(:active) {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+}
