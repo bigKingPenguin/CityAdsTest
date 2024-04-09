@@ -18,32 +18,20 @@ body {
   display: flex;
   font-family: var(--font-family-primary);
   font-size: var(--font-size-M);
-  line-height: var(--line-height);
-  font-weight: var(--font-weight-regular);
-  color: var(--color-text);
-  //background-color: var(--background-color);
-  margin-left: auto;
-  margin-right: auto;
-
-  -webkit-overflow-scrolling:touch;
+  line-height: 120%;
+  font-weight: 400;
+  color: var(--color-primary-100);
+  background-color: var(--color-background-dark);
+  //margin-left: auto;
+  //margin-right: auto;
 }
 
 
-#__nuxt,
-.root {
+#__nuxt {
   display: flex;
   flex-direction: column;
   min-width: 100%;
   min-height: 100%;
-}
-
-main {
-  padding-top: var(--header-height);
-
-  @media (min-width: 768px) {
-    height: 100%;
-    padding-top: 30px;
-  }
 }
 
 
@@ -66,6 +54,9 @@ h3,
 h4,
 h5,
 h6 {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
   margin: 0;
 }
 

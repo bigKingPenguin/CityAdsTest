@@ -1,3 +1,5 @@
+//TODO: мб удалить
+
 export default defineAppConfig({
     title: 'Zaim Nakartu',
     theme: {
