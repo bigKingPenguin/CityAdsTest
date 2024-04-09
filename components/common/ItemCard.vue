@@ -11,7 +11,7 @@
 </script>
 
 <template>
-  <div class="item">
+  <li class="item">
     <span class="item__top">{{ itemData.sellingText }}</span>
     <div class="item__main main">
       <div class="main__head">
@@ -39,7 +39,7 @@
       </ul>
       <UiCommonButton class="main__button" content="Заполнить заявку"/>
     </div>
-  </div>
+  </li>
 </template>
 
 <style scoped lang="scss">
@@ -100,6 +100,7 @@
 
     &__img {
       max-width: 70px;
+      max-height: 28px;
     }
 
     &__title {

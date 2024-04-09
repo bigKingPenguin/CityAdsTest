@@ -9,31 +9,65 @@
 
 <template>
   <div class="main">
-    <h1 class="main__title">Займы на карту онлайн от ведущих МФО </h1>
+    <div class="main__top top">
+      <h1 class="top__title">Займы на карту онлайн от ведущих МФО </h1>
+      <p class="top__description top__description--remark">Для получения большей суммы, обращайтесь в разные мфо.</p>
+      <p class="top__description">Заполнение двух и более заявок гарантирует получение требуемой суммы!</p>
+    </div>
     <ul
       v-if="data"
-      class="main__card-list card-list"
+      class="main__card-list"
     >
-      <li
+      <CommonItemCard
         v-for="item in data.data.offers"
         :key="item.id"
-        class="card-list__item">
-        <CommonItemCard :item-data="item"/>
-      </li>
+        :item-data="item"/>
     </ul>
 
   </div>
 </template>
 
 <style lang="scss" scoped>
-  p {
-    color: var(--color-primary-100);
+  .main {
+    padding-top: 70px;
+
+    &__top {
+      display: flex;
+      width: 57%;
+      flex-direction: column;
+
+      margin-bottom: 90px;
+    }
+
+    &__card-list {
+      display: flex;
+      width: 100%;
+      flex-wrap: wrap;
+
+      column-gap: var(--space-unrelated-items);
+      row-gap: var(--space-sections);
+    }
   }
 
-  .main {
+  .top {
+    position: relative;
 
-     &__card-list {
+    &__title {
+      margin-bottom: var(--space-subsections);
 
-     }
+      font-size: var(--font-size-XXXL);
+      font-weight: 300;
+      line-height: 76px;
+    }
+
+    &__description {
+      font-size: var(--font-size-XL);
+      font-weight: 300;
+      line-height: 31px;
+
+      &--remark {
+        color: var(--color-primary-50);
+      }
+    }
   }
 </style>
