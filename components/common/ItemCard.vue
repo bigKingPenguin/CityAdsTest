@@ -1,6 +1,7 @@
 <script setup lang="ts">
   import type {PropType} from "vue";
   import type {Offer} from "~/composables/types/offer";
+  import CommonButton from "~/components/ui/CommonButton.vue";
 
   defineProps({
     itemData: {
@@ -37,7 +38,7 @@
           <span class="conditions__legend">срок</span>
         </li>
       </ul>
-      <UiCommonButton class="main__button" content="Заполнить заявку"/>
+      <CommonButton class="main__button" content="Заполнить заявку"/>
     </div>
   </li>
 </template>
